@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body, html {
+    padding: 0;
+    margin: 0;
+    background-color: #141619;
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
+    overflow: hidden;
+}
+
+* {
+    box-sizing: border-box;
+    animation-name: appearance;
+    animation-duration: 1s;
+}
+
+@keyframes appearance {
+    0% {
+        transform: translateY(16px);
+        opacity: 0%;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 100%;
+    }
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    height: 550px;
+    width: 400px;
+    max-height: 80vh;
+    padding: 40px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+
+    border-radius: 42px;
+    background: url("/champagnes.svg"), linear-gradient(180deg, #25282E 0%, #25282E 0.01%, #181B1F 100%);
+    box-shadow: 12px 12px 32px 0px rgba(37, 40, 46, 0.10);
+    color: #fff;
+    background-position: center 130%;
+    background-size: 110%;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    text-align: center;
+    font-size: 4.8rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+p {
+    width: 75%;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 400;
+    opacity: 0.8;
+    margin: 0;
+    transition: color 1s;
+}
+
+@media (max-width: 425px) {
+    .box {
+        width: 80vw;
+        height: 460px;
+    }
+    p {width: 100%;}
+}
